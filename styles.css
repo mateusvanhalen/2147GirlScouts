@@ -1,0 +1,64 @@
+/* General styles */
+body {
+    font-family: 'Georgia, serif;', cursive, sans-serif;
+    background-color: #fef0f0; /* Soft pastel background */
+    color: #3d2c8d; /* Purple text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+bodyl {
+    background-color: #e6e0fa;
+}
+
+/* Add colorful and playful button */
+button {
+    background-color: #ff6f61; /* Bright pink-orange */
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff3d2e; /* Darker red */
+    transform: scale(1.1);
+}
+
+/* Image styles */
+#sillyImage {
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Main section styling */
+main {
+    text-align: center;
+    padding: 20px;
+    background-color: #fffdde; /* Light pastel yellow */
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 16px;
+    color: #3d2c8d;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Add some fun background patterns */
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/polkadots.png');
+}

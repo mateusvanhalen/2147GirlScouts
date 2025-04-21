@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sillyhead.js Example</title>
+
+    <!-- Link to your CSS stylesheets (optional) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to Sillyhead.js (Assuming it's available via CDN or locally) -->
+    <script src="path/to/Sillyhead.js"></script> <!-- If hosted locally -->
+    <!-- <script src="https://cdn.example.com/sillyhead.js"></script> --> <!-- If using a CDN -->
+    
+    <style>
+        body {
+    background-color: #f4aaf4;
+    border: 10px solid #4b0082;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+        .nav-btn {
+            padding: 12px 24px;
+            background-color: #9505ef;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        
+        .nav-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .nav-btn:active {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="nav-btn" onclick="window.location.href='index.html'">Go Home</button>
+    <header>
+        <h1>Jameson Magnolia Hall :)</h1>
+      
+    </header> 
+    <main>
+        <!-- Adding the MagnoliaSilly image -->
+        <img src="images/MagnoliaSilly.jpg" alt="Magnolia Silly Image" id="sillyImage" width="300" style="display: none;">
+        <!-- You might want to add a corresponding image for Patrick -->
+        <img src="images/PatrickImage.jpg" alt="Patrick Silly Image" id="PatrickImage" width="300" style="display: none;">
+    
+        <button id="sillyButton">Click me!</button>
+        <button id="PatrickButton">No, Click me!!</button>
+        <p id="sillyOutput"></p>
+    </main>
+    
+    <script>
+        // Get the button and the image element for Magnolia
+        const button = document.getElementById("sillyButton");
+        const image = document.getElementById("sillyImage");
+
+        // Get the button and the image element for Patrick
+        const buttonP = document.getElementById("PatrickButton");
+        const imageP = document.getElementById("PatrickImage");
+    
+        // Add event listener to button for Magnolia
+        button.addEventListener("click", function() {
+            // Toggle the visibility of the image
+            if (image.style.display === "none") {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        });
+
+        // Add event listener to button for Patrick
+        buttonP.addEventListener("click", function() {
+            // Toggle the visibility of the image
+            if (imageP.style.display === "none") {
+                imageP.style.display = "block";
+            } else {
+                imageP.style.display = "none";
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Sillyhead.js Demo</p>
+    </footer>
+
+    <!-- JavaScript to initialize and use Sillyhead.js -->
+    <script>
+        // Wait for the document to load fully
+        document.addEventListener('DOMContentLoaded', () => {
+            const sillyButton = document.getElementById('sillyButton');
+            const sillyOutput = document.getElementById('sillyOutput');
+
+            const PatrickButton = document.getElementById('PatrickButton');
+            const PatrickOutput = document.getElementById('sillyOutput'); // Fixing reference
+
+            sillyButton.addEventListener('click', () => {
+                Sillyhead.createSillyEffect(sillyOutput, 'Sillyhead says: Hello World!');
+            });
+
+            PatrickButton.addEventListener('click', () => {
+                Sillyhead.createSillyEffect(PatrickOutput, 'Sillyhead says: Hello World!');    
+            });
+        });
+    </script>
+</body>
+
+</html>
